@@ -63,7 +63,7 @@ def update_clock():
                 x, y + size,
                 x - size, y
             ]
-            canvas.create_polygon(points, fill="White", outline="#00ffff")
+            canvas.create_polygon(points, fill="#ffffff", outline="#00ffff")
 
     #時針の計算
     h_angle = math.radians(h * 30 + m * 0.5)
@@ -82,9 +82,9 @@ def update_clock():
     s_y = CENTER - 100 * math.cos(s_angle)
 
     #時針を描画
-    canvas.create_line(CENTER, CENTER, h_x, h_y, fill="White", width=6)  
+    canvas.create_line(CENTER, CENTER, h_x, h_y, fill="#ffffff", width=6)  
     #分針を描画
-    canvas.create_line(CENTER, CENTER, m_x, m_y, fill="White", width=2)
+    canvas.create_line(CENTER, CENTER, m_x, m_y, fill="#ffffff", width=2)
     #秒針を描画
     canvas.create_line(CENTER, CENTER, s_x, s_y, fill="#00ffff", width=1)
 
@@ -97,7 +97,7 @@ def update_clock():
         center_x, center_y + size,
         center_x - size, center_y
     ]
-    canvas.create_polygon(rhombus_points, fill="#1D1D1D", outline="White")
+    canvas.create_polygon(rhombus_points, fill="#1D1D1D", outline="#ffffff")
 
     #1000ミリ秒後に呼び出す
     root.after(1000, update_clock)
